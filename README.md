@@ -17,8 +17,8 @@ A sleek and modern web application that provides real-time weather information f
 
 # Take A Look
 Syntax: ![Take a Look](./images/Capture.01.PNG)
-Syntax: ![Take a Look](./images/Capture.02.PNG)
-![TAke a Look](./images/Capture.03.PNG)
+Syntax: ![View This with me](./images/Capture.02.PNG)
+![What do you think](./images/Capture.03.PNG)
 
 ## 🚀 Technologies Used
 
