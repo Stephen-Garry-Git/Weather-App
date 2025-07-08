@@ -197,7 +197,7 @@ body {
     .search input {
         font-size: 16px;
         height: 50px;
-        margin-right: 5px; /* Reduced margin for smaller screens */
+        margin-right: 8px; /* Reduced margin for smaller screens */
     }
     .search button {
         width: 50px;
@@ -222,5 +222,22 @@ body {
     }
     .col:last-child {
         margin-bottom: 0; /* No bottom margin for the last column */
+    }
+}
+
+/*MEDIA QUERY FOR VERY NARROW PHONES*/
+@media (max-width: 320px) { /* Targeting very small device widths */
+    .card {
+        padding: 20px 15px; /* Reduce card padding even more */
+    }
+    .search input {
+        margin-right: 5px; /* Further reduce margin to make space */
+    }
+    .search button {
+        width: 45px; /* Slightly shrink button if needed */
+        height: 45px;
+    }
+    .search button img {
+        width: 12px; /* Adjust icon size too */
     }
 }
