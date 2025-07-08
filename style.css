@@ -1,0 +1,245 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    font-family: 'Poppins', sans-serif; /* Corrected capitalization for Google Fonts */
+}
+
+/* Body Styling for Centering the Card */
+body {
+    background: #222; /* Dark background */
+    display: flex; /* Use flexbox to center the card easily */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height for centering */
+}
+
+/* Main Card Container */
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a); /* Nice gradient background */
+    color: #fff;
+    margin: 0 auto; /* Centered horizontally (vertical handled by body flexbox) */
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    /* Removed initial display: none here so the search bar is always visible.
+       The .weather and .error sections will be controlled by JS. */
+}
+
+/* Search Bar Layout */
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Space below the search bar */
+}
+
+/* Search Input Field */
+.search input {
+    border: 0;
+    outline: none; /* Changed from 0 to none for clarity */
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1; /* Allows the input field to take up available space */
+    margin-right: 16px;
+    font-size: 18px;
+    transition: all 0.3s ease; /* Smooth transition for focus effect */
+}
+
+/* Search Input Focus State for Accessibility */
+.search input:focus {
+    box-shadow: 0 0 0 3px rgba(0, 255, 186, 0.5); /* Highlight on focus */
+}
+
+/* Search Button */
+.search button {
+    border: 0;
+    outline: none; /* Changed from 0 to none for clarity */
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex; /* Use flexbox to perfectly center the image inside */
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.1s ease; /* Smooth transitions */
+}
+
+/* Search Button Hover and Active States */
+.search button:hover {
+    background: #d0fdfa; /* Slightly lighter background on hover */
+}
+
+.search button:active {
+    transform: scale(0.95); /* Slight press effect */
+}
+
+.search button img {
+    width: 18px; /* Slightly increased size for better visibility */
+}
+
+/*Geo-Location Button */
+.geolocation-btn {
+    border: 0;
+    outline: none;
+    background: #ebfffc; /* Or a color that fits your theme */
+    color: #555;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px; /* Space between search bar and button */
+    margin-bottom: 25px; /* Space between button and weather display */
+    transition: background 0.3s ease, transform 0.1s ease;
+    width: 100%; /* Make it full width like the search input */
+}
+
+.geolocation-btn:hover {
+    background: #d0fdfa;
+}
+
+.geolocation-btn:active {
+    transform: scale(0.98);
+}
+
+/* Weather Display Section */
+.weather {
+    /* This section will be display: none; by default via JavaScript, It will be shown when weather data is successfully loaded */
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+    margin-bottom: 10px; /* space between icon and temperature */
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1; /* Adjust line height for better spacing with h2 */
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: 5px; /* Adjusted margin-top for better spacing with h1 */
+    margin-bottom: 20px; /* Space below city name */
+}
+
+/* Weather Details (Humidity & Wind Speed) */
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center; /* Vertically center items within the column */
+    text-align: left; /* Text within the column is left-aligned */
+    flex-grow: 1; /* Allows columns to grow and take equal space */
+    justify-content: center; /* Center content within each column */
+}
+
+.col:first-child {
+    margin-right: 20px; /* Space between humidity and wind columns */
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Styling for humidity and wind speed values and labels */
+.col > div { /* Target the div containing the two <p> tags */
+    display: flex;
+    flex-direction: column;
+}
+
+.col > div p:first-child { /* Target the value (e.g., 50%, 15 km/h) */
+    font-size: 28px;
+    font-weight: 500; /* Make the value slightly bolder */
+    margin-bottom: 2px; /* Small space between value and label */
+    line-height: 1;
+}
+
+.col > div p:last-child { /* Target the label (e.g., Humidity, Wind Speed) */
+    font-size: 16px;
+    opacity: 0.8; /* Slightly dim the label */
+}
+
+/* Error Message Styling */
+.error {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff6b6b; /* A soft red color for errors */
+    font-weight: 500;
+    /* display: none; will be set by JavaScript when no error is present */
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 400px) {
+    .card {
+        padding: 30px 20px;
+    }
+    .search input {
+        font-size: 16px;
+        height: 50px;
+        margin-right: 8px; /* Reduced margin for smaller screens */
+    }
+    .search button {
+        width: 50px;
+        height: 50px;
+    }
+    .search button img {
+        width: 14px;
+    }
+    .weather h1 {
+        font-size: 60px;
+    }
+    .weather h2 {
+        font-size: 35px;
+    }
+    .details {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        padding: 0;
+    }
+    .col {
+        margin-right: 0; /* Remove horizontal margin when stacked */
+        margin-bottom: 20px; /* Add vertical space between stacked columns */
+    }
+    .col:last-child {
+        margin-bottom: 0; /* No bottom margin for the last column */
+    }
+}
+
+/*MEDIA QUERY FOR VERY NARROW PHONES*/
+@media (max-width: 320px) { /* Targeting very small device widths */
+    .card {
+        padding: 20px 15px; /* Reduce card padding even more */
+    }
+    .search input {
+        margin-right: 5px; /* Further reduce margin to make space */
+
+        min-width: 12px;
+    }
+    .search button {
+        width: 45px; /* Slightly shrink button if needed */
+        height: 45px;
+    }
+    .search button img {
+        width: 12px; /* Adjust icon size too */
+    }
+}
