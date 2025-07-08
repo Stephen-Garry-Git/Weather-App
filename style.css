@@ -232,6 +232,8 @@ body {
     }
     .search input {
         margin-right: 5px; /* Further reduce margin to make space */
+
+        min-width: 12px;
     }
     .search button {
         width: 45px; /* Slightly shrink button if needed */
