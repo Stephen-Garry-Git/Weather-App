@@ -1,0 +1,30 @@
+[33mcommit d314f73690eddfb0a80c654ccb9090cdccc7f905[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 1f350e4 56f91b7
+Author: Garry Stephen <garrystephen605@gmail.com>
+Date:   Fri Jul 18 20:09:05 2025 +0100
+
+    Merge branch 'main' of https://github.com/Stephen-Garry-Git/WEATHER-APP
+
+[33mcommit 1f350e47c0d0f0d34b94d83284a2ebf0a1e13f1f[m
+Author: Garry Stephen <garrystephen605@gmail.com>
+Date:   Fri Jul 18 20:02:52 2025 +0100
+
+    third commit
+
+[33mcommit 56f91b7e7acce14f4568ec73bbed2115944fa1c1[m
+Author: Garry-Stephen <garrystephen605@gmail.com>
+Date:   Tue Jul 8 14:34:15 2025 +0100
+
+    Update index.html
+
+[33mcommit 81b6a1639e4232b8c5d0925b3887972128645e6e[m
+Author: Garry-Stephen <garrystephen605@gmail.com>
+Date:   Tue Jul 8 10:37:34 2025 +0100
+
+    Add files via upload
+
+[33mcommit 59f1a0eef2342f2b27d429a891fe67fe8a81a743[m
+Author: Garry Stephen <garrystephen605@gmail.com>
+Date:   Tue Jul 8 00:17:28 2025 +0100
+
+    Just edited the README.md and added comment to all code source
